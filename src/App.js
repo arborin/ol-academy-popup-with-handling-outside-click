@@ -8,8 +8,10 @@ function App() {
     const mainElement = useRef();
 
     const check = (e) => {
-        if (e.target.className === "App") {
-            setShowPopup(false);
+        if (e.target.className !== "popup") {
+            if (e.target.className !== "btn-popup") {
+                setShowPopup(false);
+            }
         }
         console.log(e.target);
     };
@@ -20,13 +22,18 @@ function App() {
 
     return (
         <div className="App" ref={mainElement} onClick={check}>
-            <main>
-                <h1>React Popup</h1>
-                <button onClick={() => setShowPopup(true)}>Info popop </button>
-                <Popup trigger={showPopup} setTrigger={setButtonPopup}>
-                    <h3>My Popup</h3>
-                </Popup>
-            </main>
+            <h1 className="title">React Popup</h1>
+            <div className="button-row">
+                <button
+                    onClick={() => setShowPopup(true)}
+                    className="btn-popup"
+                >
+                    Info popop{" "}
+                </button>
+            </div>
+            <Popup trigger={showPopup} setTrigger={setButtonPopup}>
+                <h3>My Popup</h3>
+            </Popup>
         </div>
     );
 }

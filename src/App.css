@@ -39,3 +39,21 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  color: rgb(14, 19, 22);
+  padding: 20px
+}
+
+.button-row {
+  text-align: center;
+}
+
+.btn-popup {
+  padding: 10px;
+  background-color: #008ce9;
+  border: 0px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
