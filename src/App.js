@@ -8,11 +8,16 @@ function App() {
     const mainElement = useRef();
 
     const check = (e) => {
-        if (e.target.className !== "popup") {
-            if (e.target.className !== "btn-popup") {
-                setShowPopup(false);
-            }
+        console.log();
+        if (e.target.lastElementChild?.className === "popup") {
+            setShowPopup(false);
         }
+
+        // if (!mainElement.current.contains(e.target)) {
+        //     // YOUR LOGIC
+        //     setShowPopup(false);
+        //     console.log("Am Clicked!");
+        // }
         console.log(e.target);
     };
 
