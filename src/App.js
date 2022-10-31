@@ -9,7 +9,7 @@ function App() {
 
     const check = (e) => {
         console.log();
-        if (e.target.lastElementChild?.className === "popup") {
+        if (e.target.className === "popup") {
             setShowPopup(false);
         }
 
